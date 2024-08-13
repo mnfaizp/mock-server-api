@@ -9,12 +9,7 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Defines the root path route ("/")
-  # root "posts#index"
-
-  namespace :api do
-    namespace :v1 do
-      post "/integration/oauth/url-generate", to: "integration#oauth_url_generate"
-    end
-  end
+      # Defines the root path route ("/")
+      # root "posts#index"
+  post "/integration/oauth/url-generate", to: "integration#oauth_url_generate"
 end
